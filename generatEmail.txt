@@ -1,0 +1,17 @@
+   //*********************Function to generate email
+    static String generate_email(String fname , String lname )
+    {
+        String e = fname+lname+"@LookIt.com";
+        Random r = new Random();
+        int result = r.nextInt(100-10) + 10;
+
+        for (int i=0 ; i<users.size() ; i++)
+        {
+            if (!users.get(i).email.equals(e))
+                continue;
+            else
+                e = fname+lname+result+"@LookIt.com";
+        }
+        return e;
+    }
+
