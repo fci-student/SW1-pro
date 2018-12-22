@@ -1,0 +1,27 @@
+    //********************access data
+    public static void into_applecation(int num)
+    {
+        String x;
+        while (true)
+        {
+            System.out.println("1-Search \n2-post \n3-show my found items \n4-Log out" );
+            x = in.nextLine();
+
+            if (x.equals("1"))
+                search();
+
+            else if (x.equals("2"))
+                post(num);
+
+            else if (x.equals("3")) {
+                System.out.println("\nKind\tDate\t\t\tColur\tPlace\tID");
+                for (int i = 0; i < users.get(num).id.size(); i++) {
+                    for (int j=0 ; j<items.size() ; j++)
+                    {
+                        if (users.get(num).id.get(i) == items.get(j).id)
+                        {
+                            System.out.println(items.get(j).kind + "\t\t" + items.get(j).Date + "\t\t" + items.get(j).color + "\t\t" + items.get(j).place + "\t\t" + items.get(j).id + "\n");
+                        }
+                    }
+                }
+            }
