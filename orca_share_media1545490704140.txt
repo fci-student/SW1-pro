@@ -1,0 +1,25 @@
+    //****************Function of post
+    public static void post(int x){
+        String sort , date , place , color ;
+
+        System.out.println("Enter Kind of lost thing [wallet(w) - watch(wa) - phone(p)]");
+        sort = in.nextLine();
+
+        System.out.println("Enter Date of found");
+        date = in.nextLine();
+
+        System.out.println("Enter Colour of Item");
+        color = in.nextLine();
+
+        System.out.println("Enter The place where you found Item");
+        place = in.nextLine();
+
+         item i = new item(sort , date , color , place , id_item);
+
+        items.add(i);
+        users.get(x).id.add(id_item);
+
+        id_item++;
+        System.out.println("Item Added Successfully\n");
+
+    };
