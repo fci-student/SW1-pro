@@ -1,0 +1,27 @@
+   //*********************sign up form
+    public static void signup(){
+
+        String fname , lname , email = "", password;
+
+        System.out.println("Enter first name : ");
+        fname = in.nextLine();
+
+        System.out.println("Enter last name : ");
+        lname = in.nextLine();
+
+        System.out.println("Enter password : ");
+        password = in.nextLine();
+
+        email = generate_email(fname , lname);
+
+        user u = new user(fname , lname , email , password);
+        users.add(u);
+
+        System.out.println("**********************************************");
+        System.out.println("        Welcom : " + u.fname);
+        System.out.println(" Your Email is : " + u.email);
+        System.out.println("**********************************************");
+
+        into_applecation(u.iduser);
+        id_user++;
+    }

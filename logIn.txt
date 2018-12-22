@@ -1,0 +1,26 @@
+   //*********************Log in form
+    static void log_in()
+    {
+        String email , password;
+        System.out.println("Enter email : ");
+        email = in.nextLine();
+
+        System.out.println("Enter password : ");
+        password = in.nextLine();
+
+        for (int i=0 ; i<users.size() ; i++)
+        {
+            if (users.get(i).email.equals(email) && users.get(i).password.equals(password))
+            {
+                System.out.println("**********************************************");
+                System.out.println("        Welcom : " + users.get(i).fname);
+                System.out.println(" Your Email is : " + users.get(i).email);
+                System.out.println("**********************************************");
+
+                into_applecation(users.get(i).iduser);
+            }
+            else
+                System.out.println("Sorry , you are not on the System");
+        }
+
+    }
