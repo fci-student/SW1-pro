@@ -1,0 +1,42 @@
+    //****************Function of search
+    public static void search(){
+        System.out.println("\nKind\tDate\t\t\tColur\tPlace\tID");
+
+        for (int j=0 ; j<items.size() ; j++)
+             System.out.println(items.get(j).kind + "\t\t" + items.get(j).Date + "\t\t" + items.get(j).color + "\t\t" + items.get(j).place + "\t\t" + items.get(j).id + "\n");
+
+        System.out.println("Filter by : [1-Kind 2-Date 3-place]");
+        String x="" , s;
+        x = in.nextLine();
+
+        if (x.equals("1")) {
+            System.out.println("Enter Sort");
+            s = in.nextLine();
+            for (int j = 0; j < items.size(); j++) {
+                if (items.get(j).kind.equals(s)) {
+                    System.out.println(items.get(j).kind + "\t\t" + items.get(j).Date + "\t\t" + items.get(j).color + "\t\t" + items.get(j).place + "\t\t" + items.get(j).id + "\n");
+                }
+            }
+        }
+        else if (x.equals("2")) {
+            System.out.println("Enter Date in Format 'DD/MM/YYYY'");
+            s = in.nextLine();
+            for (int j = 0; j < items.size(); j++) {
+                if (items.get(j).Date.equals(s)) {
+                    System.out.println(items.get(j).kind + "\t\t" + items.get(j).Date + "\t\t" + items.get(j).color + "\t\t" + items.get(j).place + "\t\t" + items.get(j).id + "\n");
+                }
+            }
+        }
+        else if (x.equals("3")) {
+            System.out.println("Enter where do you lost");
+            s = in.nextLine();
+            for (int j = 0; j < items.size(); j++) {
+                if (items.get(j).kind.equals(s)) {
+                    System.out.println(items.get(j).kind + "\t\t" + items.get(j).Date + "\t\t" + items.get(j).color + "\t\t" + items.get(j).place + "\t\t" + items.get(j).id + "\n");
+                }
+            }
+        }
+        else
+            System.out.println("No Results \n");
+
+    };
