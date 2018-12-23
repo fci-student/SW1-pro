@@ -31,7 +31,7 @@
             System.out.println("Enter where do you lost");
             s = in.nextLine();
             for (int j = 0; j < items.size(); j++) {
-                if (items.get(j).kind.equals(s)) {
+                if (items.get(j).place.equals(s)) {
                     System.out.println(items.get(j).kind + "\t\t" + items.get(j).Date + "\t\t" + items.get(j).color + "\t\t" + items.get(j).place + "\t\t" + items.get(j).id + "\n");
                 }
             }
